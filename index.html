@@ -16,7 +16,9 @@
 <header class="site">
   <div class="container">
     <nav class="bar">
-      <a class="brand" href="#top"><img src="assets/img/header_logo_blacktext.png" alt="myHue logo"/></a>
+      <a class="brand" href="#top" aria-label="myHue home">
+        <img src="assets/img/header_logo_blacktext.png" alt="myHue logo"/>
+      </a>
       <div class="links">
         <a href="#features">Features</a>
         <a href="#gallery">Screenshots</a>
@@ -34,29 +36,32 @@
         <span class="eyebrow">Personal color, powered by AI</span>
         <h1>Find your best colors—<span style="color:var(--brand)">see the difference instantly</span>.</h1>
         <p>myHue analyzes your selfie to detect skin tone, hair & eye color, and contrast level—then gives you a precise 12-season type with tailored palettes, plus a visual “Your Traits” breakdown.</p>
-        <div class="badges" id="download">
-          
-          <div class="badges">
-            <a class="store-badge"
-              href="https://apps.apple.com/app/idYOUR_APP_ID"
-              aria-label="Download on the App Store">
-              <img src="assets/img/badges/apple_ios.png" alt="Download on the App Store">
-            </a>
 
-            <a class="store-badge"
-              href="https://play.google.com/store/apps/details?id=YOUR.PACKAGE"
-              aria-label="Get it on Google Play">
-              <img src="assets/img/badges/google_play.png" alt="Get it on Google Play">
-            </a>
-          </div>
+        <!-- badges + CTA -->
+        <div class="badges" id="download">
+          <a class="store-badge"
+            href="https://apps.apple.com/app/idYOUR_APP_ID"
+            target="_blank" rel="noopener"
+            aria-label="Download on the App Store">
+            <img src="assets/img/badges/apple_ios.png" alt="Download on the App Store" decoding="async">
+          </a>
+
+          <a class="store-badge"
+            href="https://play.google.com/store/apps/details?id=YOUR.PACKAGE"
+            target="_blank" rel="noopener"
+            aria-label="Get it on Google Play">
+            <img src="assets/img/badges/google_play.png" alt="Get it on Google Play" decoding="async">
+          </a>
 
           <a class="btn btn--primary btn--store-sized" href="#features">Explore features</a>
         </div>
+
         <small class="disclaimer">Store links are placeholders—swap in your live App Store & Google Play URLs.</small>
       </div>
+
       <div class="phone">
         <div class="screen">
-          <img src="assets/img/hero.jpg" alt="myHue app preview (replace with screenshot)"/>
+          <img src="assets/img/hero.jpg" alt="myHue app preview"/>
         </div>
       </div>
     </div>
@@ -81,8 +86,7 @@
     <div class="container">
       <span class="eyebrow">In-app visuals</span>
       <h2>Screenshots</h2>
-      <div class="gallery" id="gallery-grid">
-      </div>
+      <div class="gallery" id="gallery-grid"></div>
     </div>
   </section>
 
@@ -92,23 +96,24 @@
         <div>
           <h2>Ready to glow?</h2>
           <p>Questions or feedback? We’d love to hear from you.</p>
-          
+
           <div class="badges">
             <a class="store-badge"
               href="https://apps.apple.com/app/idYOUR_APP_ID"
+              target="_blank" rel="noopener"
               aria-label="Download on the App Store">
-              <img src="assets/img/badges/apple_ios.png" alt="Download on the App Store">
+              <img src="assets/img/badges/apple_ios.png" alt="Download on the App Store" decoding="async">
             </a>
 
             <a class="store-badge"
               href="https://play.google.com/store/apps/details?id=YOUR.PACKAGE"
+              target="_blank" rel="noopener"
               aria-label="Get it on Google Play">
-              <img src="assets/img/badges/google_play.png" alt="Get it on Google Play">
+              <img src="assets/img/badges/google_play.png" alt="Get it on Google Play" decoding="async">
             </a>
 
             <a class="btn btn--store-sized" href="mailto:support@myhue.app">support@myhue.app</a>
           </div>
-          
         </div>
       </div>
     </div>
@@ -117,9 +122,21 @@
 
 <footer class="footer">
   <div class="container grid">
-    <div><div style="display:flex;align-items:center;gap:10px;"><img src="assets/img/header_logo.png" alt="myHue" style="height:24px;width:auto"/> <strong style="color:#e2e8f0"></div><small>© <span id="year"></span> myHue. All rights reserved.</small></div>
-    <div style="display:flex;gap:18px;align-items:center"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="assets/img/header_logo.png" alt="myHue" style="height:24px;width:auto"/>
+        <strong style="color:#e2e8f0">myHue</strong>
+      </div>
+      <small>© <span id="year"></span> myHue. All rights reserved.</small>
+    </div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
   </div>
 </footer>
+
 <script src="assets/js/main.js"></script>
-</body></html>
+</body>
+</html>

@@ -38,25 +38,23 @@ a:hover{text-decoration:underline}
 .btn--primary:hover{background:var(--brand-dark)}
 
 /* Store badges (image buttons) */
-/* .badges{display:flex;gap:12px;align-items:center;flex-wrap:wrap} */
 .badges{
   display:flex;
   align-items:center;
   flex-wrap:wrap;
-  column-gap:12px;   /* horizontal space between items */
-  row-gap:22px;      /* vertical space between rows */
+  column-gap:12px;  /* horizontal space */
+  row-gap:22px;     /* vertical space when wrapping */
 }
-
-.badges .btn{ margin-top:6px; }
+.badges .btn{ margin-top:6px; } /* tiny lift when it wraps */
 
 /* Make text buttons match the store badge size */
 .btn--store-sized{
-  height: var(--badge-h);          /* same height as the image badges */
+  height: var(--badge-h);
   border-radius: var(--badge-radius);
-  padding: 0 24px;                 /* horizontal padding only */
+  padding: 0 24px;
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;             /* no wrapping inside the button */
+  white-space: nowrap;
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
 .btn--store-sized:hover{
@@ -72,11 +70,10 @@ a:hover{text-decoration:underline}
   transition:transform .12s ease, box-shadow .12s ease;
 }
 .store-badge img{
-  height:var(--badge-h); /* fixed height */
-  width:auto;            /* keep aspect */
-  max-width:100%;        /* prevent overflow */
-  display:block;         /* remove inline gap */
-  border-radius:inherit;  /* extra safety */
+  height:var(--badge-h);
+  width:auto; max-width:100%;
+  display:block;
+  border-radius:inherit;
 }
 .store-badge:hover{
   transform:translateY(-1px);
@@ -84,6 +81,13 @@ a:hover{text-decoration:underline}
 }
 /* optional on dark backgrounds */
 /* .store-badge { border:1px solid rgba(255,255,255,.15); } */
+
+/* Focus accessibility */
+.store-badge:focus-visible,
+.btn:focus-visible{
+  outline:2px solid var(--brand);
+  outline-offset:2px;
+}
 
 /* Header */
 header.site{
@@ -165,6 +169,11 @@ nav .links{display:flex;gap:20px;align-items:center}
 
 /* Small print */
 small.disclaimer{display:block;color:#64748b;margin-top:10px}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important}
+}
 
 /* Responsive */
 @media (max-width:900px){
